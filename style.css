@@ -57,7 +57,7 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: var(--very-dark-blue);
-  margin: 0.3em 0;
+  margin: 0.5em 0;
 }
 
 .content-card .desc-card {
@@ -106,8 +106,7 @@ body {
 
 @media (min-width: 768px) {
   .card {
-    height: 90vh;
-    width: 750px;
+    width: 600px;
     grid-template-columns: repeat(2, 1fr);
     margin: 0;
   }
@@ -123,23 +122,5 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 2em;
-  }
-
-  .content-card .title-card {
-    font-size: 3em;
-    margin-top: 0.5em;
-  }
-
-  .content-card .desc-card {
-    font-size: 1.2em;
-  }
-
-  .content-card .price-card {
-    font-size: 2em;
-  }
-
-  .content-card .btn-add {
-    padding: 1.5em 0;
-    margin: 1em 0;
   }
 }
