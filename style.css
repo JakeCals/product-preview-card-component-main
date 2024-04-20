@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 14px;
+  line-height: 1;
+  max-width: 100%;
+  min-height: 100vh;
+  background-color: var(--cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 375px;
+  background-color: var(--white);
+  border-radius: 0.7em;
+  overflow: hidden;
+  margin: 2em 0;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hero-img {
+  height: 45vh;
+  background-image: url(images/image-product-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content-card {
+  padding: 1.5em;
+}
+
+.content-card .category-card {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+  color: var(--dark-grayish-blue);
+}
+
+.content-card .title-card {
+  font-family: 'Fraunces', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--very-dark-blue);
+  margin: 0.3em 0;
+}
+
+.content-card .desc-card {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+.content-card .price-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: 'Fraunces', sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--dark-cyan);
+  margin: 0.7em 0;
+}
+
+.content-card .price-card .discount {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+}
+
+.content-card .btn-add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 1em 0;
+  background-color: var(--dark-cyan);
+  font-weight: 700;
+  font-size: 0.9em;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 0.5em;
+}
+
+.content-card .btn-add:active {
+  background-color: hsl(158, 36%, 25%);
+}
+
+@media (min-width: 768px) {
+  .card {
+    height: 90vh;
+    width: 750px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+  }
+
+  .hero-img {
+    height: 100%;
+    background-size: cover;
+    background-image: url(images/image-product-desktop.jpg);
+  }
+
+  .content-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+  }
+
+  .content-card .title-card {
+    font-size: 3em;
+    margin-top: 0.5em;
+  }
+
+  .content-card .desc-card {
+    font-size: 1.2em;
+  }
+
+  .content-card .price-card {
+    font-size: 2em;
+  }
+
+  .content-card .btn-add {
+    padding: 1.5em 0;
+    margin: 1em 0;
+  }
+}
